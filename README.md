@@ -1,7 +1,12 @@
 #Golf Now API
 
 [![Build Status](https://travis-ci.org/darkfadr/node-golfnow.svg?branch=master)](https://travis-ci.org/darkfadr/node-golfnow)
+
 > Promise based API library that exposes an abstraction over the GolfNow Affiliate API. Doing this cause I didn't like the implementation of another solution.
+
+[![forthebadge](http://forthebadge.com/images/badges/no-ragrets.svg)](http://forthebadge.com)
+[![forthebadge](http://forthebadge.com/images/badges/makes-people-smile.svg)](http://forthebadge.com)
+[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
 
 # Usage
 ```
@@ -30,7 +35,7 @@ api.root()
 ```
 
 ## Setting API context
-*Important: you must use the `.setChannel([chanel_id:required])` method to establish the context in which your API runs in, * __I know...I know...this is dictated by the API, but hopefully in the near future I could abstract that out.__ 
+**Important: you must use the `.setChannel([chanel_id:required])` method to establish the context in which your API runs in.**  _I know...I know...this is dictated by the API, but hopefully in the near future this can be abstracted that out :)_
 ```
 api.setChannel(12345);
 ```
