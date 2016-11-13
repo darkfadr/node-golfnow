@@ -17,16 +17,37 @@ const api = golfnow({
 api.root()
 	.then(res => console.log(res.data));
 	.catch(err => console.log(err.response.data));
-
-api.channel()
-	.then(res => console.log(res.data));
-	.catch(err => console.log(err.response.data));
 ```
 
 # API
 At it's core `node-golfnow` uses `axios`. It currently exposes abstactions around the `[root, channels, course, courses, rateTags, invoices]` resouces of the API, however any missing or new enpoint can be implemented via the the extension `get` and `post` methods
 
-## Custom enpoints
+## Root
+```
+api.root()
+	.then(res => console.log(res.data));
+	.catch(err => console.log(err.response.data));
+```
+
+## Setting API context
+*Important: you must use the `.setChannel([chanel_id:required])` method to establish the context in which your API runs in, * __I know...I know...this is dictated by the API, but hopefully in the near future I could abstract that out.__ 
+```
+api.setChannel(12345);
+```
+
+
+## Channels
+If a channel is not passed, then it will return a list of channels that you have access to.
+```
+api.channels([channel_id:optional])
+	.then(res => {
+		api.setChannel(/*le channel id*/)
+		console.log(res.data)
+	});
+	.catch(err => console.log(err.response.data));
+```
+
+## Custom endpoints
 The sdk exposes the `get` and `post` methods for customized integration with the GolfNow Affiliate API
 
 ```
