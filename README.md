@@ -68,5 +68,5 @@ app.post(url, payload)
 	.catch(err => console.log(err.response.data));
 ```
 
-# Constributors
+# Contributors
 Ashley Narcisse <ashlay49@gmail.com>
