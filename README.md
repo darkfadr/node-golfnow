@@ -1,4 +1,4 @@
-Golf Now API
+#Golf Now API
 
 [![Build Status](https://travis-ci.org/darkfadr/node-golfnow.svg?branch=master)](https://travis-ci.org/darkfadr/node-golfnow)
 > Promise based API library that exposes an abstraction over the GolfNow Affiliate API. Doing this cause I didn't like the implementation of another solution.
