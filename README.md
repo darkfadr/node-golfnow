@@ -10,7 +10,10 @@
 [![forthebadge](http://forthebadge.com/images/badges/makes-people-smile.svg)](http://forthebadge.com)
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
 
-# Usage
+## Installation
+`$ npm install --save node-golfnow`
+
+## Usage
 ```
 import golfnow from 'node-golfnow';
 //const golfnow = require('golfnow'); // for non import env
@@ -26,24 +29,24 @@ api.root()
 	.catch(err => console.log(err.response.data));
 ```
 
-# API
+## API
 At it's core `node-golfnow` uses `axios`. It currently exposes abstactions around the `[root, channels, course, courses, rateTags, invoices]` resouces of the API, however any missing or new enpoint can be implemented via the the extension `get` and `post` methods
 
-## Root
+### Root
 ```
 api.root()
 	.then(res => console.log(res.data));
 	.catch(err => console.log(err.response.data));
 ```
 
-## Setting API context
+### Setting API context
 **Important: you must use the `.setChannel([chanel_id:required])` method to establish the context in which your API runs in.**  _I know...I know...this is dictated by the API, but hopefully in the near future this can be abstracted that out :)_
 ```
 api.setChannel(12345);
 ```
 
 
-## Channels
+### Channels
 If a channel is not passed, then it will return a list of channels that you have access to.
 ```
 api.channels([channel_id:optional])
@@ -54,7 +57,7 @@ api.channels([channel_id:optional])
 	.catch(err => console.log(err.response.data));
 ```
 
-## Custom endpoints
+### Custom endpoints
 The sdk exposes the `get` and `post` methods for customized integration with the GolfNow Affiliate API
 
 ```
@@ -70,5 +73,5 @@ app.post(url, payload)
 	.catch(err => console.log(err.response.data));
 ```
 
-# Contributors
+## Contributors
 Ashley Narcisse <ashlay49@gmail.com>
