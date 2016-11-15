@@ -73,5 +73,8 @@ app.post(url, payload)
 	.catch(err => console.log(err.response.data));
 ```
 
+## Tests
+`$ npm test`
+
 ## Contributors
 Ashley Narcisse <ashlay49@gmail.com>
